@@ -41,4 +41,10 @@ GitHub → Repository → Settings → Pages → Build and deployment:
 - Folder: /docs
 - Save
 
-Die Demo verwendet Beispieldaten und benötigt keine Garmin-Zugangsdaten. Nach Änderungen am React-Code `npm run build` ausführen und die eigenständige HTML-Datei neu erzeugen, bevor die Pages-Demo aktualisiert wird.
+Die Demo verwendet Beispieldaten und benötigt keine Garmin-Zugangsdaten. Nach Änderungen `npm run build:pages` ausführen. Damit wird `docs/index.html` automatisch aus dem aktuellen Build erstellt.
+
+## Mobile Ansicht
+
+Für iPhone-Bildschirmgrößen optimiert: feste Navigation unten, Safe-Area-Abstände, große Touch-Flächen und Eingabefelder ohne automatischen Zoom. Die Funktionen wurden im Chromium-Browser bei 320, 375, 390 und 430 Pixeln Breite geprüft. Safari auf einem echten iPhone wurde noch nicht getestet.
+
+Health-, Belastungs- und Erholungskarten orientieren sich an der vom Nutzer gelieferten Vorlage. Alle Gesundheitswerte und Scores sind reine Beispieldaten und keine medizinische Bewertung.
