@@ -9,7 +9,8 @@
     "preview": "vite preview --host 0.0.0.0",
     "build:pages": "vite build && node scripts/export-pages.mjs",
     "start": "node server/index.mjs",
-    "test:backend": "node --test server/index.test.mjs"
+    "test:backend": "node --test server/index.test.mjs",
+    "build:ios": "npm run build:pages && node scripts/export-ios.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",

@@ -1,0 +1,32 @@
+name: Pulse
+options:
+  bundleIdPrefix: com.pulse.personal
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  Pulse:
+    type: application
+    platform: iOS
+    sources:
+      - path: Pulse
+        excludes: [Resources]
+      - path: Pulse/Resources
+        buildPhase: resources
+    info:
+      path: Pulse/Info.plist
+      properties:
+        CFBundleDisplayName: Pulse
+        NSHealthShareUsageDescription: Pulse liest mit deiner Zustimmung Schritte, Herzfrequenz, Schlaf und Trainingsdaten, um dein persönliches Dashboard anzuzeigen. Die Daten bleiben auf deinem iPhone.
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    entitlements:
+      path: Pulse/Pulse.entitlements
+      properties:
+        com.apple.developer.healthkit: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pulse.personal.dashboard
