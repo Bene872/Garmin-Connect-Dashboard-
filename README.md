@@ -1,6 +1,6 @@
 # Pulse — Garmin Connect Dashboard
 
-Ein responsives Dashboard in Schwarz und Lila mit React, Vite und Lucide Icons.
+Ein responsives Dashboard in Schwarz und Grün mit React, Vite und Lucide Icons.
 
 ## Entwicklung
 
@@ -48,3 +48,19 @@ Die Demo verwendet Beispieldaten und benötigt keine Garmin-Zugangsdaten. Nach �
 Für iPhone-Bildschirmgrößen optimiert: feste Navigation unten, Safe-Area-Abstände, große Touch-Flächen und Eingabefelder ohne automatischen Zoom. Die Funktionen wurden im Chromium-Browser bei 320, 375, 390 und 430 Pixeln Breite geprüft. Safari auf einem echten iPhone wurde noch nicht getestet.
 
 Health-, Belastungs- und Erholungskarten orientieren sich an der vom Nutzer gelieferten Vorlage. Alle Gesundheitswerte und Scores sind reine Beispieldaten und keine medizinische Bewertung.
+
+## Auf dem iPhone verwenden
+
+1. https://bene872.github.io/Garmin-Connect-Dashboard-/ in Safari öffnen.
+2. Teilen-Menü öffnen, dann „Zum Home-Bildschirm“ wählen (ggf. unter „Aktionen bearbeiten“ hinzufügen).
+3. Wenn angeboten, „Als Web-App öffnen“ aktivieren, dann „Hinzufügen“.
+
+Der Home-Bildschirm-Eintrag öffnet das Dashboard. Eine Internetverbindung ist erforderlich; Offline-Unterstützung und Hintergrundsynchronisierung sind nicht implementiert.
+
+## Echte Garmin-Daten
+
+Eine Webseite kann wegen der App-Isolation von iOS nicht direkt auf Daten in der Connect-App zugreifen. Für die offizielle automatische Synchronisierung ist eine freigegebene Garmin-Connect-Developer-Anbindung mit einem Backend und einem unterstützten Autorisierungsablauf nötig. Umfang und Verfügbarkeit der Daten hängen vom API-Zugang ab; ein Zugriff auf alle Connect-Daten kann nicht zugesichert werden. Übersicht: https://developer.garmin.com/gc-developer-program/overview/
+
+Alternativ kann ein gesonderter Import für Garmin-Exportdateien entwickelt werden. Er ist aktuell nicht vorhanden. Apple Health stellt Webseiten keinen direkten HealthKit-Zugriff bereit; dafür wäre eine native iOS-Komponente erforderlich, und nicht alle Garmin-Werte werden an Apple Health übertragen.
+
+Keine Garmin-Passwörter oder API-Schlüssel im öffentlichen Repository oder Frontend speichern. Derzeit sind alle Scores und Schlafphasen Beispieldaten; es gibt keine Garmin-Verbindung.
